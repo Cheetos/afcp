@@ -15,7 +15,7 @@ int main() {
 
   for (int i = 2; i < N; i++) {
     int j = n - i;
-    if (P[j] == 0) {
+    if (P[i] == 0 && P[j] == 0) {
       printf("%d + %d = %d\n", i, j, n);
       break;
     }
