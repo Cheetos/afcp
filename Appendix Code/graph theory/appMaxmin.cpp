@@ -63,7 +63,7 @@ long getIndex(char *cad, long n) {
   return -1;
 }
 
-void add_in_list(char *cad, long pos) { 
+void addInList(char *cad, long pos) { 
   strcpy(city[pos], cad);
 }
 
