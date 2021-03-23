@@ -99,6 +99,9 @@ void addWord(int nodeId, string word, int pos) {
     trie.push_back(TrieNode());
   }
 
-  trie[k].isWord = (pos == word.length() - 1) ? true : false;
+  if (pos == word.length() - 1) {
+    trie[k].isWord = true;
+  }
+  
   addWord(k, word, pos + 1);
 }
