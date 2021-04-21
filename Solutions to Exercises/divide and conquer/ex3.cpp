@@ -52,7 +52,7 @@ int main() {
     scanf("%lld %lld", &a, &b);
 
     x2 = E[a];
-    x2 = max(x2, b);
+    x2 = min(x2, b);
     val1 = answerQuery(a, x2);
     val2 = answerQuery(x2 + 1, b);
 
