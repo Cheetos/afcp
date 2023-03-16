@@ -34,15 +34,15 @@ int main() {
 
 bool bpm(int u) {
   for (int v = 0; v < n; v++) {
-    if (graph[u][v]) {
-      if (seen[v]) {
+    if (graph[v][u]) {
+      if (seen[u]) {
         continue;
       }
 
-      seen[v] = true;
-      if (matchR[v] < 0 || bpm(matchR[v])) {
-        matchL[u] = v;
-        matchR[v] = u;
+      seen[u] = true;
+      if (matchR[u] < 0 || bpm(matchR[u])) {
+        matchL[v] = u;
+        matchR[u] = v;
         return true;
       }
     }
