@@ -1,5 +1,9 @@
 # Algorithms for Competitive Programming
 
+### Errata
+
+* A fix to the source code for Maximum Bipartite Matching (BPM) was added. The limits of the for-loops needed to be corrected.  
+
 ### What is new in the second edition?
 
 * Codes refactored following best practices.
