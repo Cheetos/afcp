@@ -18,7 +18,7 @@ int main() {
   graph[3][1] = true;
 
   int nMatches = 0;
-  for (int i = 0; i < m; i++) {
+  for (int i = 0; i < n; i++) {
     fill(seen.begin(), seen.end(), false);
     if (bpm(i)) {
       nMatches++;
@@ -33,7 +33,7 @@ int main() {
 }
 
 bool bpm(int u) {
-  for (int v = 0; v < n; v++) {
+  for (int v = 0; v < m; v++) {
     if (graph[u][v]) {
       if (seen[v]) {
         continue;
