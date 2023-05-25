@@ -29,18 +29,18 @@ void buildSegmentTree(vector<int>& x) {
     // initialize leaf nodes
     for (int i = 0, j = n - 1; j < 2 * n - 1; i++, j++) {
         if (i < x.size()) {
-            segmentTree.at(j) = Node(i, i, x.at(i));
+            segmentTree[j] = Node(i, i, x[i]);
         } else {
-            segmentTree.at(j) = Node(i, i, 0);
+            segmentTree[j] = Node(i, i, 0);
         }
     }
 
     // compute internal nodes
     for (int i = 2 * n - 2; i > 0; i -= 2) {
-        int a = segmentTree.at(i - 1).a;
-        int b = segmentTree.at(i).b;
-        int maxValue = max(segmentTree.at(i - 1).maxValue, segmentTree.at(i).maxValue);
-        segmentTree.at(i / 2 - 1) = Node(a, b, maxValue);
+        int a = segmentTree[i - 1].a;
+        int b = segmentTree[i].b;
+        int maxValue = max(segmentTree[i - 1].maxValue, segmentTree[i].maxValue);
+        segmentTree[i / 2 - 1] = Node(a, b, maxValue);
     }
 }
 
@@ -73,7 +73,6 @@ int main() {
 
     buildSegmentTree(x);
 
-    int I, J;
     for (int i = 0; i < queries.size(); i++) {
         printf("max value in [%d, %d] = %d\n",
                queries[i].first,
