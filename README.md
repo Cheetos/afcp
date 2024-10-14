@@ -2,12 +2,11 @@
 
 ### Errata
 
-* For the segment tree code, while creating the tree inside the `for-loop,` it should be `i > 0` instead of `i >= 0`; since node 0 is the tree's root. The file with the code is already updated.
-
-* A fix to the source code for Maximum Bipartite Matching (BPM) was added. The limits of the for-loops needed to be corrected.  
+Previous errors have been fixed in the latest version.
 
 ### What is new in the second edition?
 
+* Interviews with experts in competitive programming, software engineering, and researching.
 * Codes refactored following best practices.
 * More problems and exercises.
 * Chapters from the previous edition have been revised and updated.
